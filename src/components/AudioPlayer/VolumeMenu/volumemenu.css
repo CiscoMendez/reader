@@ -1,0 +1,67 @@
+.volumen-range {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  /*  overflow: hidden;  remove this line*/
+
+  /* New additions */
+  height: 6px;
+  background: #e7e5e4;
+}
+
+/* Thumb: webkit */
+.volumen-range::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 15px;
+  width: 15px;
+  background-color: #e54056;
+  border-radius: 50%;
+  border: none;
+
+  /* box-shadow: -407px 0 0 400px #E54056; emove this line */
+  transition: 0.2s ease-in-out;
+}
+
+/* Thumb: Firefox */
+.volumen-range::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #e54056;
+  border-radius: 50%;
+  border: none;
+
+  /* box-shadow: -407px 0 0 400px #E54056; emove this line */
+  transition: 0.2s ease-in-out;
+}
+
+/* Hover, active & focus Thumb: Webkit */
+
+.volumen-range::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(255, 0, 64, 0.1);
+}
+.volumen-range:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 8px rgba(255, 0, 64, 0.2);
+}
+.volumen-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 8px rgba(255, 0, 64, 0.2);
+}
+
+/* Hover, active & focus Thumb: Firfox */
+
+.volumen-range::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(255, 0, 64, 0.1);
+}
+.volumen-range:active::-moz-range-thumb {
+  box-shadow: 0 0 0 8px rgba(255, 0, 64, 0.2);
+}
+.volumen-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 8px rgba(255, 0, 64, 0.2);
+}

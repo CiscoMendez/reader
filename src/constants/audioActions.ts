@@ -1,0 +1,11 @@
+export const AUDIO_ACTIONS = {
+  LOAD: 'LOAD',
+  PLAY: 'PLAY',
+  PAUSE: 'PAUSE',
+  STOP: 'STOP',
+  SEEK: 'SEEK',
+  ENDED: 'ENDED',
+  MUTED: 'MUTED',
+  SET_VOLUME: 'SET_VOLUME',
+  UPDATE_TIME: 'UPDATE_TIME',
+} as const;
