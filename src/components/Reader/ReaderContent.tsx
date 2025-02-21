@@ -7,8 +7,7 @@ import AudioProgressBar from '../AudioPlayer/AudioProgressBar';
 import Link from 'next/link';
 
 const ReaderContent = ({ pages }: { pages: PageContent[] }) => {
-  const { currentPage, nextPage, prevPage, hasNextPage, hasPrevPage } =
-    usePagination(pages.length);
+  const { currentPage, nextPage, prevPage } = usePagination(pages.length);
   if (!pages) return;
   return (
     <div key={currentPage} className="relative h-dvh">
