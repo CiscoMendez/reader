@@ -7,12 +7,12 @@ interface PageParams {
 }
 
 interface PageProps {
-  params: PageParams;
+  params: Promise<PageParams>;
 }
 
 export default async function Page({ params }: PageProps) {
   const taleService = createTaleService();
-  const { slug } = await params;
+  const { slug } = await Promise.resolve(params);
   const tale = await taleService.getTale(slug);
 
   if (!tale) {

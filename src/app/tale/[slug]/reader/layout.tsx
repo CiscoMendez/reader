@@ -7,7 +7,7 @@ interface PageParams {
 }
 
 interface PageProps {
-  params: PageParams;
+  params: Promise<PageParams>;
   children: React.ReactNode;
 }
 
