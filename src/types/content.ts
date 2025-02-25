@@ -79,8 +79,14 @@ export interface Transcription {
 export interface TranscriptionItem {
   id: string;
   startTime: string;
+  startSeconds: number;
   endTime: string;
+  endSeconds: number;
   text: string;
+}
+export interface Paragraph {
+  startBlockId: number;
+  block: TranscriptionItem[];
 }
 
 

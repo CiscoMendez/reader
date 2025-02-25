@@ -157,6 +157,7 @@ export const useAudioPlayer = ({
   return {
     states,
     ref,
+    getAudio,
     play,
     togglePlayPause,
     pause,

@@ -5,6 +5,7 @@ import type { PageContent } from '@/types';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import AudioProgressBar from '../AudioPlayer/AudioProgressBar';
 import Link from 'next/link';
+import Subtitles from './Subtitles';
 
 const ReaderContent = ({ pages }: { pages: PageContent[] }) => {
   const { currentPage, nextPage, prevPage } = usePagination(pages.length);
@@ -37,6 +38,7 @@ const ReaderContent = ({ pages }: { pages: PageContent[] }) => {
           siguiente
         </Link>
       </div>
+      <Subtitles subtitles={pages[currentPage - 1].subs} />
       <AudioProgressBar barColor="#AAAA" />
     </div>
   );
